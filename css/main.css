@@ -34,12 +34,13 @@ body {
     text-transform: uppercase;
     display: block;
     background-color: rgba(179, 211, 53, 60%);
+    text-shadow: 0 1px black;
 }
 
 .container a {
     text-decoration: none;
-    color: rgba(255, 219, 0, alpha);
     font-size: 1.15em;
+    color: rgba(205, 151, 0);
 }
 
 @media screen and (min-width: 500px) {
