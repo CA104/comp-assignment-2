@@ -64,6 +64,14 @@ body {
     margin: 0 1.5em;
 }
 
+.info {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(4, 30, 65, 25%);
+}
+
 @media screen and (min-width: 500px) {
     .content-blocks {
         grid-template-columns: 1fr 1fr;
