@@ -1,8 +1,28 @@
 body {
-    background-color: rgba(4, 30, 65, 80%);
+    background-color: rgba(4, 30, 65, 95%);
     opacity: 10%;
     color: white;
     font-family: 'Muli', sans-serif;
+}
+
+.menu-bar {
+    padding: 1em 1em;
+    text-align: right;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(4, 30, 65, 95%);
+    border-bottom: 0.15px solid whitesmoke;
+}
+
+nav a {
+    color: rgba(205, 151, 0);
+    text-decoration: none;
+}
+
+.intro {
+    margin-top: 3em;
 }
 
 .logo {
@@ -70,6 +90,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: rgba(4, 30, 65, 25%);
+    border-top: 0.15px solid whitesmoke;
 }
 
 @media screen and (min-width: 500px) {
