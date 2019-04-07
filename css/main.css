@@ -5,6 +5,10 @@ body {
     font-family: 'Play', sans-serif;
 }
 
+h3 {
+    color: #0097A9;
+}
+
 .menu-bar {
     padding: 1em 2em;
     text-align: right;
