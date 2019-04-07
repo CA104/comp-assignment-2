@@ -6,7 +6,7 @@ body {
 }
 
 .menu-bar {
-    padding: 1em 1em;
+    padding: 1em 2em;
     text-align: right;
     position: fixed;
     left: 0;
@@ -19,6 +19,11 @@ body {
 nav a {
     color: rgba(205, 151, 0);
     text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(255, 219, 0, 100%);
+    color: rgba(4, 30, 65, 95%);
 }
 
 .intro {
