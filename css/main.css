@@ -78,6 +78,11 @@ nav a:hover {
     padding-bottom: 1em;
 }
 
+.grades li {
+    font-size: 1.25em;
+    padding-bottom: 1em;
+}
+
 .add-item {
     display: block;
     text-align: right;
