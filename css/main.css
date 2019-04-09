@@ -31,14 +31,15 @@ nav a:hover {
 }
 
 .intro {
-    margin-top: 3em;
+    margin-top: 5em;
+    margin-bottom: 2em;
 }
 
 .logo {
     max-width: 120px;
     margin: 0 1em;
     padding-top: 1em;
-    padding-left: 1em;
+    padding-left: 2em;
 }
 
 .content-blocks {
