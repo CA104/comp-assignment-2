@@ -110,6 +110,14 @@ nav a:hover {
     border-top: 0.15px solid whitesmoke;
 }
 
+input {
+    margin: 0.25em;
+    padding: 0.25em;
+    background-color: rgba(4, 30, 65, 85%);
+    color: white;
+    border: 0.5px solid #cc9900;
+}
+
 @media screen and (min-width: 500px) {
     .content-blocks {
         grid-template-columns: 1fr 1fr;
