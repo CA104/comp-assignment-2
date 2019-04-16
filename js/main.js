@@ -7,7 +7,7 @@ const taskList = [
 
 const printAllTasks = () => {
     // Maps each row from the all tasks array to some html
-    let currentTasks = taskList.map(newTask => console.log(newTask));
+    let currentTasks = taskList.map(newTask => (newTask.task));
 }
 
 const addNewTask = () => {
@@ -21,11 +21,8 @@ const addNewTask = () => {
     localStorage.setItem('tasks', JSON.stringify(taskList));
 
     // Reprint the list of current tasks
-    printAllTasks();
+    printAllTasks(document.getElementById('upcoming').innerHTML = printAllTasks(addNewTask()));
 
     // Clear out what's there in "new"
     // Re-focus the input so I can add more
 }
-
-
-printAllTasks();
