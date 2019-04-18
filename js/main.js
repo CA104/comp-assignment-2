@@ -11,13 +11,7 @@ const printAllTasks = () => {
     document.getElementById('upcoming').innerHTML = taskList.map(newTask => `<li>${newTask.date} <br> ${newTask.task}</li>`).join('');
 }
 
-const addNewTaskBtn = () => {
-    document.getElementById('newTask').submit();
-}
-
 const addNewTask = () => {
-    alert("button pressed!")
-
 
     // // Get the date from UI
     let date = document.getElementById('date').value;
@@ -44,13 +38,10 @@ const addNewTask = () => {
 
     // Reprint the list of current tasks
     printAllTasks();
-    // let html = ""
-    // for (let i = 0; i < taskList.length; i++) {
-    //     html += `<li>${taskList[i].date} <br> ${taskList[i].task}</li>`
-    // }
+
     document.getElementById('upcoming').innerHTML = html
     // Clear out what's there in "new"
     // Re-focus the input so I can add more
 }
 
-// addNewTask();
+addNewTask();
