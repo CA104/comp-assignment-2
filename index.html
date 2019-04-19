@@ -84,12 +84,12 @@
       <section class="tasks container">
         <h2>Tasks</h2>
 
-      <!-- <form action="newTask"> -->
-        <input type="text" name="date" id="date" placeholder="Enter date">
-        <input type="text" name="tasks" id="tasks" placeholder="Enter task">
+      <form action="newTask">
+        <input type="date" name="date" id="date" placeholder="Enter date" required>
+        <input type="text" name="tasks" id="tasks" placeholder="Enter task" required>
         <button type="button" onclick="addNewTask()" class="add-item">New Task</button>
         <ul id="upcoming" class="tasks-view"></ul>
-      <!-- </form> -->
+      </form>
 
         <div class="calendar"></div>
       </section>
