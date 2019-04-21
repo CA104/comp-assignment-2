@@ -121,6 +121,10 @@ input {
     border: 0.5px solid #cc9900;
 }
 
+.tasks-app {
+    display: block;
+}
+
 @media screen and (min-width: 550px) {
     .content-blocks {
         grid-template-columns: 1fr 1fr;
