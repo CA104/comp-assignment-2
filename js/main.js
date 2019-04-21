@@ -38,7 +38,7 @@ const addNewTask = () => {
     document.getElementById('tasks').value = " ";
 
     // Re-focus the input so I can add more
-    document.getElementById('tasks').focus();
+    // document.getElementById('tasks').focus();
 }
 
 addNewTask();
