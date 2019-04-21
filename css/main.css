@@ -121,7 +121,7 @@ input {
     border: 0.5px solid #cc9900;
 }
 
-@media screen and (min-width: 490px) {
+@media screen and (min-width: 550px) {
     .content-blocks {
         grid-template-columns: 1fr 1fr;
     }
