@@ -4,8 +4,8 @@ let taskList = []
 const printAllTasks = () => {
 
     // Maps each row from the all tasks array to some html
-    document.getElementById('upcoming').innerHTML = taskList.map(newTask => `<li>${newTask.date} <br> ${newTask.task}</li> 
-        <br> <a href= "https://wddm2019.slack.com/messages/CF8CBLGBW/" target= "_blank">`).join('');
+    document.getElementById('upcoming').innerHTML = taskList.map(newTask => `<li class= "animated bounceIn tasks-listed">${newTask.date} <br> ${newTask.task} 
+        <br> ${newTask.course}</li>`).join('');
 }
 
 const addNewTask = () => {
@@ -14,6 +14,8 @@ const addNewTask = () => {
     let date = document.getElementById('date').value;
     // // Get the task name from UI
     let tasks = document.getElementById('tasks').value;
+    // // Get the course selection from UI
+    let course = document.getElementById('course').value;
 
     // check if there are things already in local storage
     var items = localStorage.getItem("tasks")
@@ -26,7 +28,7 @@ const addNewTask = () => {
     }
 
     // Create an object, push to the local data set (array)
-    taskList.push({ "date":date, "task":tasks});
+    taskList.push({ "date":date, "task":tasks, "course":course});
     
     // Store the entire list of tasks to localstorage
     localStorage.setItem('tasks', JSON.stringify(taskList));

@@ -93,7 +93,7 @@ nav a:hover {
 }
 
 .blackboard {
-    width: 10em;
+    width: 7em;
     margin: 1em;
     background-color: white;
 }
@@ -113,9 +113,9 @@ nav a:hover {
     border-top: 0.15px solid whitesmoke;
 }
 
-input {
-    margin: 0.25em;
-    padding: 0.25em;
+.input-boxes {
+    margin: 0.50em;
+    padding: 0.50em;
     background-color: rgba(4, 30, 65, 85%);
     color: white;
     border: 0.5px solid #cc9900;
@@ -123,6 +123,15 @@ input {
 
 .tasks-app {
     display: block;
+}
+
+.course-selection {
+    width: 10em;
+}
+
+.tasks-listed {
+    padding-bottom: 1em;
+    padding-left: 1em;
 }
 
 @media screen and (min-width: 550px) {
