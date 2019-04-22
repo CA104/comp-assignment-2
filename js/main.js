@@ -1,10 +1,8 @@
-// All tasks array
-let taskList = []
+let taskList = [] // All tasks array
 
 const printAllTasks = () => {
-
-    // Maps each row from the all tasks array to some html
-    document.getElementById('upcoming').innerHTML = taskList.map(newTask => 
+    
+    document.getElementById('upcoming').innerHTML = taskList.map(newTask => // Maps each row from the all tasks array to some html
         `<li class= "animated bounceIn tasks-listed">
         ${newTask.date} <br> ${newTask.task} 
         <br> ${newTask.course}</li>`).join('');
@@ -12,34 +10,29 @@ const printAllTasks = () => {
 
 const addNewTask = () => {
 
-    // // Get the date from UI
-    let date = document.getElementById('date').value;
-    // // Get the task name from UI
-    let tasks = document.getElementById('tasks').value;
-    // // Get the course selection from UI
-    let course = document.getElementById('course').value;
+    
+    let date = document.getElementById('date').value;  // Get the date from UI
+    
+    let tasks = document.getElementById('tasks').value;  // Get the task name from UI
+    
+    let course = document.getElementById('course').value;  // Get the course selection from UI
 
-    // check if there's anything in local storage
-    var items = localStorage.getItem("tasks")
+    
+    var items = localStorage.getItem("tasks") // check if there's anything in local storage
     if (items == "" || items == undefined) {
         console.log("No tasks available")
     }
     else {
-        // convert whatever was in local storage back into an array so you can work with it
-        taskList = JSON.parse(items)
+        taskList = JSON.parse(items) // convert whatever was in local storage back into an array so you can work with it
     }
 
-    // Create an object, push to the local data set (array)
-    taskList.push({ "date":date, "task":tasks, "course":course });
+    taskList.push({ "date":date, "task":tasks, "course":course }); // Create an object, push to the local data set (array)
     
-    // Store the entire list of tasks to localstorage
-    localStorage.setItem('tasks', JSON.stringify(taskList));
+    localStorage.setItem('tasks', JSON.stringify(taskList)); // Store the entire list of tasks to localstorage
 
-    // Reprint the list of current tasks
-    printAllTasks();
+    printAllTasks(); // Reprint the list of current tasks
 
-    // Clear out what's there in "new"
-    document.getElementById('tasks').value = " ";
+    document.getElementById('tasks').value = " "; // Clear out what's there in "new"
 }
 
 addNewTask();
