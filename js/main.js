@@ -4,7 +4,9 @@ let taskList = []
 const printAllTasks = () => {
 
     // Maps each row from the all tasks array to some html
-    document.getElementById('upcoming').innerHTML = taskList.map(newTask => `<li class= "animated bounceIn tasks-listed">${newTask.date} <br> ${newTask.task} 
+    document.getElementById('upcoming').innerHTML = taskList.map(newTask => 
+        `<li class= "animated bounceIn tasks-listed">
+        ${newTask.date} <br> ${newTask.task} 
         <br> ${newTask.course}</li>`).join('');
 }
 
@@ -19,7 +21,7 @@ const addNewTask = () => {
 
     // check if there's anything in local storage
     var items = localStorage.getItem("tasks")
-    if (items == null || items == undefined) {
+    if (items == "" || items == undefined) {
         console.log("No tasks available")
     }
     else {
