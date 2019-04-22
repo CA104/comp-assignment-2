@@ -5,7 +5,7 @@ const printAllTasks = () => {
 
     // Maps each row from the all tasks array to some html
     document.getElementById('upcoming').innerHTML = taskList.map(newTask => `<li class= "animated bounceIn tasks-listed">${newTask.date} <br> ${newTask.task} 
-        <br> ${newTask.course} - <a href="#" id="remove">Remove</a></li>`).join('');
+        <br> ${newTask.course}</li>`).join('');
 }
 
 const addNewTask = () => {
