@@ -17,7 +17,7 @@ const addNewTask = () => {
     // // Get the course selection from UI
     let course = document.getElementById('course').value;
 
-    // check if there are things already in local storage
+    // check if there's anything in local storage
     var items = localStorage.getItem("tasks")
     if (items == null || items == undefined) {
         console.log("No tasks available")
