@@ -5,7 +5,7 @@ const printAllTasks = () => {
 
     // Maps each row from the all tasks array to some html
     document.getElementById('upcoming').innerHTML = taskList.map(newTask => `<li class= "animated bounceIn tasks-listed">${newTask.date} <br> ${newTask.task} 
-        <br> ${newTask.course}</li>`).join('');
+        <br> ${newTask.course} - <a href="#" id="remove">Remove</a></li>`).join('');
 }
 
 const addNewTask = () => {
@@ -28,7 +28,7 @@ const addNewTask = () => {
     }
 
     // Create an object, push to the local data set (array)
-    taskList.push({ "date":date, "task":tasks, "course":course});
+    taskList.push({ "date":date, "task":tasks, "course":course });
     
     // Store the entire list of tasks to localstorage
     localStorage.setItem('tasks', JSON.stringify(taskList));
@@ -38,9 +38,6 @@ const addNewTask = () => {
 
     // Clear out what's there in "new"
     document.getElementById('tasks').value = " ";
-
-    // Re-focus the input so I can add more
-    // document.getElementById('tasks').focus();
 }
 
 addNewTask();
