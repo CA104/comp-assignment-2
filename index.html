@@ -85,7 +85,7 @@
       <section class="tasks container animated slideInRight">
         <h2>Tasks</h2>
 
-      <form action="newTask" class="tasks-app">
+      <form id="newTask" class="tasks-app">
         Due Date: <input type="date" name="date" class="input-boxes" id="date" placeholder="Enter date" required>
         <br>
         Course: <select name="Course" class="input-boxes course-sel" id="course" required>
@@ -100,7 +100,7 @@
         </select>
         <br>
         Enter Task: <input type="text" name="tasks" class="input-boxes" id="tasks" placeholder="Enter task" required>
-        <button type="button" onclick="addNewTask()" class="add-item">Add Task</button>
+        <button type="submit" class="add-item">Add Task</button>
         <ul id="upcoming" class="tasks-view animated slideInRight"></ul>
       </form>
       </section>
