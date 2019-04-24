@@ -1,9 +1,9 @@
 let courseList = [ // list of courses and their info
-    {id: 113, name: 'Applied Web Programming', code: `wddm_113`, instructor: `Rocco Panacci`, url: `/pages/web-programming.html`},
-    {id: 115, name: 'Tools and Workflow for the Web', code: `wddm_115`, instructor: `Jenelle Chen`, url: `/pages/tools-workflow.html`},
-    {id: 117, name: 'Web Design Plan & Prototyping', code: `wddm_117`, instructor: `Felice Forte`, url: `/pages/plan-prototyping.html`},
-    {id: 116, name: 'Web Production Techniques', code: `wddm_116`, instructor: `Milorad Eftoski`, url: `/pages/production-techniques.html`},
-    {id: 114, name: 'Applied Web Design', code: `wddm_114`, instructor: `Rocco Panacci`, url: `/pages/web-programming.html`}
+    {id: 113, name: 'Applied Web Programming', code: `wddm_113`, instructor: `Rocco Panacci`},
+    {id: 115, name: 'Tools and Workflow for the Web', code: `wddm_115`, instructor: `Jenelle Chen`},
+    {id: 117, name: 'Web Design Plan & Prototyping', code: `wddm_117`, instructor: `Felice Forte`},
+    {id: 116, name: 'Web Production Techniques', code: `wddm_116`, instructor: `Milorad Eftoski`},
+    {id: 114, name: 'Applied Web Design', code: `wddm_114`, instructor: `Rocco Panacci`}
     ]
 
 const allCourses = [
