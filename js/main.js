@@ -1,3 +1,27 @@
+let courseList = [ // list of courses and their info
+    {id: 113, name: 'Applied Web Programming', code: `wddm_113`, instructor: `Rocco Panacci`, url: `/pages/web-programming.html`},
+    {id: 115, name: 'Tools and Workflow for the Web', code: `wddm_115`, instructor: `Jenelle Chen`, url: `/pages/tools-workflow.html`},
+    {id: 117, name: 'Web Design Plan & Prototyping', code: `wddm_117`, instructor: `Felice Forte`, url: `/pages/plan-prototyping.html`},
+    {id: 116, name: 'Web Production Techniques', code: `wddm_116`, instructor: `Milorad Eftoski`, url: `/pages/production-techniques.html`},
+    {id: 114, name: 'Applied Web Design', code: `wddm_114`, instructor: `Rocco Panacci`, url: `/pages/web-programming.html`}
+    ]
+
+const allCourses = [
+    { courseId: 113, color: `rgb(163, 163, 225)` },
+    { courseId: 115, color: `rgb(208, 152, 128` },
+    { courseId: 117, color: `rgb(107, 206, 200)` },
+    { courseId: 116, color: `rgb(173, 180, 95)` },
+    { courseId: 114, color: `rgb(100, 140, 10)` },
+  ];
+ 
+
+const printAllCourses = () => { // function to print the enrolled courses list
+    document.getElementById('enrolled-courses').innerHTML = courseList.map( enrolled =>
+        `<li class="container"><a href="${enrolled.url}">${enrolled.name} - ${enrolled.code} <br>
+        Instructor: ${enrolled.instructor}</li>`).join('');
+}
+    printAllCourses();
+
 
 const printAllTasks = () => {
     
@@ -48,9 +72,6 @@ const setToLocalStorage = () => {
    // printAllTasks(); // Reprint the list of current tasks
 
 }
-
-
-
 let taskList = getFromLocalStorage(); // All tasks array
 
 printAllTasks();
