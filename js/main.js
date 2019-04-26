@@ -74,16 +74,17 @@ const logout = () => {
 }
 
 
-const studentProfile = () => {
+const studentProfile = () => { // displays student information
     event.preventDefault();
-    document.getElementById('profile').innerHTML = `<h3>Carlos Arellano</h3> <br> 
+    document.getElementById('course-content').innerHTML = `<h3><strong>Carlos Arellano</strong></h3> <br> 
             <p>Program: Web Design & Develpment</p> <br>
             <p>Student #: N01062419</p> <br>
-            <p>Email Address: carlos_arellano@hotmail.ca</p>`
+            <p>Email Address: carlos_arellano@hotmail.ca</p> <br>
+            <a href="https://humber.ca/myhumber/">MyHumber.ca</a>`
 }
 
-const displayContent = () => {
+const displayContent = () => { // displays current grades 
     event.preventDefault();
     document.getElementById('course-content').innerHTML = courseList.map( enrolled => 
-        `<h3 class="grades animatet bounceIn">${enrolled.name}</h3> <br> <p>${enrolled.grade}%</p>`).join('')
+        `<h3 class="grades animated bounceIn">${enrolled.name}</h3> <br> <p>${enrolled.grade}%</p>`).join('')
 }
