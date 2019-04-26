@@ -1,31 +1,21 @@
 let courseList = [ // list of courses and their info
-    {id: 113, name: 'Applied Web Programming', code: `wddm_113`, instructor: `Rocco Panacci`},
-    {id: 115, name: 'Tools and Workflow for the Web', code: `wddm_115`, instructor: `Jenelle Chen`},
-    {id: 117, name: 'Web Design Plan & Prototyping', code: `wddm_117`, instructor: `Felice Forte`},
-    {id: 116, name: 'Web Production Techniques', code: `wddm_116`, instructor: `Milorad Eftoski`},
-    {id: 114, name: 'Applied Web Design', code: `wddm_114`, instructor: `Rocco Panacci`}
+    {id: 113, name: 'Applied Web Programming', code: `wddm_113`, instructor: `Rocco Panacci`, grade: 80},
+    {id: 115, name: 'Tools and Workflow for the Web', code: `wddm_115`, instructor: `Jenelle Chen`, grade: 80},
+    {id: 117, name: 'Web Design Plan & Prototyping', code: `wddm_117`, instructor: `Felice Forte`, grade: 80},
+    {id: 116, name: 'Web Production Techniques', code: `wddm_116`, instructor: `Milorad Eftoski`, grade: 80},
+    {id: 114, name: 'Applied Web Design', code: `wddm_114`, instructor: `Rocco Panacci`, grade: 80}
     ]
-
-const allCourses = [
-    { courseId: 113, color: `rgb(163, 163, 225)` },
-    { courseId: 115, color: `rgb(208, 152, 128` },
-    { courseId: 117, color: `rgb(107, 206, 200)` },
-    { courseId: 116, color: `rgb(173, 180, 95)` },
-    { courseId: 114, color: `rgb(100, 140, 10)` },
-  ];
- 
 
 const printAllCourses = () => { // function to print the enrolled courses list
     document.getElementById('enrolled-courses').innerHTML = courseList.map( enrolled =>
-        `<li class="container"><a href="${enrolled.url}">${enrolled.name} - ${enrolled.code} <br>
+        `<li class="input-boxes">${enrolled.name} - ${enrolled.code} <br>
         Instructor: ${enrolled.instructor}</li>`).join('');
 }
     printAllCourses();
 
 
-const printAllTasks = () => {
-    
-    document.getElementById('upcoming').innerHTML = taskList.map(newTask => // Maps each row from the all tasks array to some html
+const printAllTasks = () => { // Maps each row from the all tasks array to some html
+    document.getElementById('upcoming').innerHTML = taskList.map(newTask => 
         `<li class= "animated bounceIn tasks-listed">
         ${newTask.date} <br> ${newTask.task} 
         <br> ${newTask.course}</li>`).join('');
@@ -75,3 +65,25 @@ const setToLocalStorage = () => {
 let taskList = getFromLocalStorage(); // All tasks array
 
 printAllTasks();
+
+
+
+// deal with login
+const logout = () => {
+    window.location.href="login.html"
+}
+
+
+const studentProfile = () => {
+    event.preventDefault();
+    document.getElementById('profile').innerHTML = `<h3>Carlos Arellano</h3> <br> 
+            <p>Program: Web Design & Develpment</p> <br>
+            <p>Student #: N01062419</p> <br>
+            <p>Email Address: carlos_arellano@hotmail.ca</p>`
+}
+
+const displayContent = () => {
+    event.preventDefault();
+    document.getElementById('course-content').innerHTML = courseList.map( enrolled => 
+        `<h3 class="grades animatet bounceIn">${enrolled.name}</h3> <br> <p>${enrolled.grade}%</p>`).join('')
+}
