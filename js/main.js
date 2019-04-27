@@ -14,6 +14,13 @@ const printAllCourses = () => { // function to print the enrolled courses list
 }
     printAllCourses();
 
+/********** dropdown ***********/
+const coursesDropdown = () => {
+    document.getElementById('course').innerHTML = courseList.map( dropdown =>
+         `<option value='${dropdown.id}'>${dropdown.name}</option>`).join('')
+}
+coursesDropdown();
+
 /********** tasks container **********/
 const printAllTasks = () => { // Maps each row from the all tasks array to some html
     document.getElementById('upcoming').innerHTML = taskList.map(newTask => 
