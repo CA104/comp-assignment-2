@@ -5,8 +5,7 @@ const students = [
 ]
 
 const login = () => {
-    
-if(
+    if(
 ( ('carlos') == document.getElementById('username').value) && 
 (document.getElementById('password').value == (123))) {
     window.location.href="index.html"

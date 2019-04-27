@@ -6,6 +6,7 @@ let courseList = [ // list of courses and their info
     {id: 114, name: 'Applied Web Design', code: `wddm_114`, instructor: `Rocco Panacci`, grade: 80}
     ]
 
+/********** courses container **********/
 const printAllCourses = () => { // function to print the enrolled courses list
     document.getElementById('enrolled-courses').innerHTML = courseList.map( enrolled =>
         `<li class="input-boxes">${enrolled.name} - ${enrolled.code} <br>
@@ -13,7 +14,7 @@ const printAllCourses = () => { // function to print the enrolled courses list
 }
     printAllCourses();
 
-
+/********** tasks container **********/
 const printAllTasks = () => { // Maps each row from the all tasks array to some html
     document.getElementById('upcoming').innerHTML = taskList.map(newTask => 
         `<li class= "animated bounceIn tasks-listed">
@@ -21,16 +22,13 @@ const printAllTasks = () => { // Maps each row from the all tasks array to some 
         <br> ${newTask.course}</li>`).join('');
 }
 
+/********** gets values from UI and deals with local storage **********/
 const taskForm = document.getElementById('newTask');
 const addNewTask = () => {
-
-    // prevent the page from refreshing
-    event.preventDefault();
+    event.preventDefault(); // prevent the page from refreshing
     
     let date = document.getElementById('date').value;  // Get the date from UI
-    
     let tasks = document.getElementById('tasks').value;  // Get the task name from UI
-    
     let course = document.getElementById('course').value;  // Get the course selection from UI
     
     taskList.push({ "date":date, "task":tasks, "course":course }); // Create an object, push to the local data set (array)
@@ -54,26 +52,17 @@ const getFromLocalStorage = () => {
     }
 }
 
-
 const setToLocalStorage = () => {
-
     localStorage.setItem('tasks', JSON.stringify(taskList)); // Store the entire list of tasks to localstorage
-
-   // printAllTasks(); // Reprint the list of current tasks
-
 }
 let taskList = getFromLocalStorage(); // All tasks array
-
 printAllTasks();
 
-
-
-// deal with login
-const logout = () => {
+const logout = () => { // deal with login
     window.location.href="login.html"
 }
 
-
+/********** switch between student profile and grades ***********/
 const studentProfile = () => { // displays student information
     event.preventDefault();
     document.getElementById('course-content').innerHTML = `<h3><strong>Carlos Arellano</strong></h3> <br> 
