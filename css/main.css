@@ -1,6 +1,5 @@
 body {
-    background-color: rgba(4, 30, 65, 95%);
-    opacity: 10%;
+    background-color: rgba(4, 30, 65, 100%);
     color: white;
     font-family: 'Raleway', sans-serif;
 }
@@ -130,11 +129,6 @@ nav a:hover {
 
 .tasks-listed {
     padding: 1em;
-}
-
-.bulma-hero {
-    background-color: rgba(4, 30, 65, 95%);
-    padding: 1em 0;
 }
 
 @media screen and (min-width: 550px) {

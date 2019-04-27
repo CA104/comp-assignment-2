@@ -9,29 +9,24 @@
     <link rel="icon" href="img/H&B-logo.png" type="image/gif" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
-    <main class="bulma-hero">
-      <nav class="buttons are-medium">
-        <button type="submit" onClick="login()">Login</button>
-      </nav>
+    <main>
 
-      <section class="hero is-link is-fullheight-with-navbar">
-        <div class="hero-body bulma-hero">
-          <div class="container">
-              <h1 class="title">Login</h1>
-
-              <form id="newUser">
-            <input class="input-boxes" type="username" placeholder="Username" id="username" required>
-            <br>
-            <input class="input-boxes" type="password" placeholder="Password" id="password" required>
-            </form>
-          </div>
-        </div>
-      </section>
+      <header class="intro">
+        <img src="img/H&B-logo.png" alt="Humber+Blackboard logo" class="logo animated rotateIn">
+      </header>
+      
+      <div class="login-form">
+      <form id="newUser">
+      <input type="username" placeholder="Username" id="username" required>
+      <br>
+      <input type="password" placeholder="Password" id="password" required>
+      </form>
+      <button class='login-button' type="submit" onClick="login()">Login</button>
+      </div>
 
     </main>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
