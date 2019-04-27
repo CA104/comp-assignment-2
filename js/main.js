@@ -15,7 +15,7 @@ const printAllCourses = () => { // function to print the enrolled courses list
     printAllCourses();
 
 /********** dropdown ***********/
-const coursesDropdown = () => {
+const coursesDropdown = () => { // dropdown for all enrolled courses
     document.getElementById('course').innerHTML = courseList.map( dropdown =>
          `<option value='${dropdown.id}'>${dropdown.name}</option>`).join('')
 }
