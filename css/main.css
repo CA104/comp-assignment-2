@@ -32,6 +32,10 @@ nav a:hover {
     color: rgba(4, 30, 65, 95%);
 }
 
+.sub-menu a:hover {
+    color: #0097A9;
+}
+
 .intro {
     margin-top: 5em;
     margin-bottom: 2em;
