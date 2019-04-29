@@ -1,9 +1,6 @@
 /********** current users **********/
 let students = [ // array of students with existing logins
     {studentUsername: 'n01062419', studentPassword: 'carlos123'},
-    {studentUsername: 'n02847541', studentPassword: 'mazen456'},
-    {studentUsername: 'n03750924', studentPassword: 'nicole789'},
-    {studentUsername: 'n04872047', studentPassword: 'rocco101'}
 ];
 
 /********** login validator **********/
