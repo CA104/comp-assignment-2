@@ -76,7 +76,7 @@ const studentProfile = () => { // displays student information
             <p>Program: Web Design & Develpment</p> <br>
             <p>Student #: N01062419</p> <br>
             <p>Email Address: carlos_arellano@hotmail.ca</p> <br>
-            <a href="https://humber.ca/myhumber/">MyHumber.ca</a>`
+            <a class="my-humber" href="https://humber.ca/myhumber/">MyHumber.ca</a>`
 }
 
 const displayContent = () => { // displays current grades 
