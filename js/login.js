@@ -13,8 +13,8 @@ let login = ( studentsLogins ) => { // fucntion to validate username and passwor
             === document.getElementById('password').value)) {
                 window.location.href="index.html"
             }
-            else // NOTE: issue with the alert popping on screen for each element when the username and/or password are incorrect
-            alert('Wrong username or password')
-            return;
+            // else // NOTE: issue with the alert popping on screen for each element when the username and/or password are incorrect or correct :(
+            // alert('Wrong username or password')
+            // return;
     });
 }
